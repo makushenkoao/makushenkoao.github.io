@@ -1,0 +1,176 @@
+body {
+    font-size: 18px;
+    background-color: #d4d4d4;
+}
+
+.container-loading {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.none {
+    display: none !important;
+}
+
+.pt {
+    padding-top: 300px;
+}
+
+.line {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.log-out {
+    border: 1px solid #807e7e;
+    border-radius: 6px;
+    padding: 10px;
+    background-color: #b0b0b0;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.log-out:hover {
+    background-color: rgba(147, 147, 147, 0.38);
+}
+
+.log-out:active {
+    scale: 1.1;
+}
+
+.about-user {
+    padding: 0 200px;
+    align-items: center;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.about-user-avatar {
+    max-width: 230px;
+    max-height: 230px;
+    border: 4px solid #4d4d4d;
+    border-radius: 50%;
+}
+.about-user-avatar img {
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login::after {
+    position: absolute;
+    content: "";
+    display: block;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.5s;
+}
+
+.login:hover::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.5s;
+}
+
+.bio {
+    max-width: 300px;
+    line-height: 150%;
+}
+
+.about-profile-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.followers, .following, .repositories {
+    cursor: pointer;
+    text-align: center;
+    font-size: 20px;
+    transition: .4s;
+}
+
+.repositories:hover {
+    color: #737373;
+}
+
+.about-profile-content {
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.repositories-content-title {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #000;
+}
+
+@keyframes loading-spinner {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+
+.loading-spinner div {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #6a6969;
+    border-top-color: transparent;
+    border-radius: 50%;
+}
+
+.loading-spinner div {
+    animation: loading-spinner 1s linear infinite;
+    top: 100px;
+    left: 100px
+}
+
+.loading {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: #d7d5d5;
+}
+.loading-spinner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+.loading-spinner div {
+    box-sizing: content-box;
+}
